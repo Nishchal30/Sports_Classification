@@ -1,0 +1,12 @@
+tensorflow
+pandas
+ipykernel
+numpy
+matplotlib
+tqdm
+streamlit
+seaborn
+ensure
+pyYAML
+joblib
+-e .
