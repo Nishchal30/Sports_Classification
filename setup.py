@@ -6,6 +6,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "Sports_Classification"
 AUTHOR_USER_NAME = "Nishchal30"
+<<<<<<< HEAD
 SRC_REPO = "src/Sports_Classification"
 AUTHOR_EMAIL = "nishchaljinturkar30@gmail.com"
 
@@ -18,3 +19,6 @@ setup(
     package_dir={"":"src"},
     packages=find_packages(where="src")
 )
+=======
+SRC_REPO = ""
+>>>>>>> 1f3c2991b0426af7ac8fd31ce3e0a93259426401
