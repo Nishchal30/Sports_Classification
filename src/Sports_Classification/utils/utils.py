@@ -31,6 +31,14 @@ def read_yaml(yaml_file : Path):
         raise CustomException(e, sys)
     
 
+@staticmethod
+def save_model(path : Path, model):
+    try:
+        model.save(path)
+    except Exception as e:
+        logging.info("Error occured in save_model method in prepare base model file")
+        raise CustomException(e, sys)
+
 
 @ensure_annotations
 def create_directories(directory_path : list, verbose = True):
