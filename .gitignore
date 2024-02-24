@@ -12,22 +12,18 @@ build/
 develop-eggs/
 dist/
 downloads/
+artifacts/
 eggs/
 .eggs/
+*.h5
 lib/
 lib64/
-<<<<<<< HEAD
 data/
 *.jpg/
 parts/
 sdist/
 var/
 *.zip/
-=======
-parts/
-sdist/
-var/
->>>>>>> 1f3c2991b0426af7ac8fd31ce3e0a93259426401
 wheels/
 share/python-wheels/
 *.egg-info/
