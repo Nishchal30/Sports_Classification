@@ -6,11 +6,7 @@ matplotlib
 tqdm
 streamlit
 seaborn
-<<<<<<< HEAD
 ensure
 pyYAML
 joblib
-=======
-
->>>>>>> 1f3c2991b0426af7ac8fd31ce3e0a93259426401
 -e .

@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-var = "-e ."
+# var = "-e ."
 
 __version__ = "0.0.0"
 
@@ -15,6 +15,6 @@ setup(
     version=__version__,
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
-    package_dir={"":"src"},
-    packages=find_packages(where="src")
+    # package_dir={"":"src"},
+    packages=find_packages()
 )

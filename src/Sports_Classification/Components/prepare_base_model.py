@@ -27,7 +27,16 @@ class PrepareBaseModel:
             logging.info("Error occured in create base model method in prepare base model file")
             raise CustomException(e, sys)
 
-    
+
+    @staticmethod
+    def save_model(path : Path, model):
+        try:
+            model.save(path)
+        except Exception as e:
+            logging.info("Error occured in save_model method in prepare base model file")
+            raise CustomException(e, sys)
+        
+        
     @staticmethod
     def create_full_model(learning_rate, freeze_all, freeze_till, classes, model):
 
