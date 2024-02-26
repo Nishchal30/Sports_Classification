@@ -9,4 +9,5 @@ seaborn
 ensure
 pyYAML
 joblib
+scipy
 -e .

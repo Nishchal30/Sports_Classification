@@ -46,6 +46,10 @@ def create_directories(directory_path : list, verbose = True):
             logging.info("directories created successfully")
 
 
+@staticmethod
+def save_model(path:Path, model):
+    model.save(path)
+
 
 @ensure_annotations
 def get_size(file_path: Path) -> str:
