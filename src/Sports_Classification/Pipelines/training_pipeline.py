@@ -2,6 +2,7 @@ from src.Sports_Classification.Components.data_ingestion import DataIngestion
 from src.Sports_Classification.Components.prepare_base_model import PrepareBaseModel
 from src.Sports_Classification.Components.model_trainer import Model_Training
 from src.Sports_Classification.Config.configuration import ConfigurationManager
+from src.Sports_Classification.Components.model_evaluation import Model_Evaluation
 
 
 config = ConfigurationManager()
@@ -24,3 +25,11 @@ model_training = Model_Training(config=model_training_config)
 model_training.get_base_model()
 model_training.train_valid_generator()
 model_training.train()
+
+
+# Model Evaluation
+
+eval_config = config.get_evaluation_config()
+evaluation = Model_Evaluation(eval_config)
+evaluation.eveluate_model()
+evaluation.log_into_mlflow()

@@ -21,6 +21,7 @@ lib64/
 data/
 *.jpg/
 parts/
+mlruns/
 sdist/
 var/
 *.zip/

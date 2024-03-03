@@ -63,3 +63,11 @@ def get_size(file_path: Path) -> str:
     """
     size_in_kb = round(os.path.getsize(file_path)/1024)
     return f"~ {size_in_kb} KB"
+
+
+@ensure_annotations
+def save_json(path : Path, data : dict):
+    with open(path, "w") as f:
+        json.dump(data, f, indent=4)
+    
+    logging.info(f"Json file is saved at {path}")

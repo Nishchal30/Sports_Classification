@@ -1,6 +1,8 @@
 from src.Sports_Classification.Constants import *
+import os
 from src.Sports_Classification.utils.utils import read_yaml, create_directories
-from src.Sports_Classification.Entity.config_entity import DataIngestionConfig, BaseModelConfig, ModelTrainingConfig
+from src.Sports_Classification.Entity.config_entity import DataIngestionConfig, BaseModelConfig,  \
+ModelTrainingConfig, ModelEvaluationConfig
 
 
 class ConfigurationManager:
@@ -71,3 +73,16 @@ class ConfigurationManager:
 
 
         return training_config
+    
+
+    def get_evaluation_config(self) -> ModelEvaluationConfig:
+        eval_config = ModelEvaluationConfig(
+            model_path =r"D:\Deep_Learning_Projects\Sports_Classification\artifacts\model_training\model.h5",
+            training_data_path=r"D:\Deep_Learning_Projects\Sports_Classification\artifacts\data_ingestion\data\train",
+            all_params=self.params,
+            mlflow_url="https://dagshub.com/Nishchal30/Sports_Classification.mlflow",
+            image_size=self.params["IMAGE_SIZE"],
+            batch_size=self.params["BATCH_SIZE"],
+        )
+
+        return eval_config
