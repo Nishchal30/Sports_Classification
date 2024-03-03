@@ -11,4 +11,5 @@ pyYAML
 joblib
 scipy
 mlflow
+dvc
 -e .

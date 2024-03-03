@@ -1,0 +1,87 @@
+stages:
+
+  # pipeline:
+  #   cmd: python src/Sports_Classification/Pipelines/training_pipeline.py
+
+  #   deps:
+  #     - src/Sports_Classification/Pipelines/training_pipeline.py
+  #     - artifacts/data_ingestion/data
+  #     - config/config.yaml
+  #     - artifacts/base_model/base_model.h5
+  #     - artifacts/model_training/model.h5
+
+  #   params:
+  #     - IMAGE_SIZE
+  #     - INCLUDE_TOP
+  #     - CLASSES
+  #     - WEIGHTS
+  #     - LEARNING_RATE
+  #     - EPOCHS
+  #     - AUGMENTATION
+      
+  #   outs:
+  #     - scores.json
+
+  data_ingestion:
+    # cmd: python src/Sports_Classification/Components/data_ingestion.py
+    cmd: python src/Sports_Classification/Pipelines/training_pipeline.py
+
+    deps:
+      - src/Sports_Classification/Pipelines/training_pipeline.py
+      - config/config.yaml
+
+    outs:
+      - artifacts/data_ingestion/data/train
+
+  # prepare_base_model:
+  #   cmd: python src/Sports_Classification/Components/prepare_base_model.py
+
+  #   deps:
+  #     - src/Sports_Classification/Components/prepare_base_model.py
+  #     - config/config.yaml
+    
+  #   params:
+  #     - IMAGE_SIZE
+  #     - INCLUDE_TOP
+  #     - CLASSES
+  #     - WEIGHTS
+  #     - LEARNING_RATE
+    
+  #   outs:
+  #     - artifacts/base_model
+
+    
+  # model_training:
+  #   cmd: python src/Sports_Classification/Components/model_trainer.py
+
+  #   deps:
+  #     - src/Sports_Classification/Components/model_trainer.py
+  #     - config/config.yaml
+  #     - artifacts/data_ingestion
+  #     - artifacts/base_model
+
+  #   params:
+  #     - IMAGE_SIZE
+  #     - EPOCHS
+  #     - BATCH_SIZE
+  #     - AUGMENTATION
+
+  #   outs:
+  #     - artifacts/model_training
+
+  
+  # model_evaluation:
+  #   cmd: python src/Sports_Classification/Components/model_evaluation.py
+
+  #   deps:
+  #     - src/Sports_Classification/Components/model_evaluation.py
+  #     - config/config.yaml
+  #     - artifacts/data_ingestion
+  #     - artifacts/model_training
+
+  #   params:
+  #     - IMAGE_SIZE
+  #     - BATCH_SIZE
+
+
+

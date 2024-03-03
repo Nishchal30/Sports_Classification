@@ -52,7 +52,7 @@ class Model_Evaluation:
     def save_score(self):
         scores = {"loss" : self.score[0], "accuracy" : self.score[1]}
         save_json(path = Path("model_score.json"), data = scores)
-
+        self.save_score()
 
 
     def log_into_mlflow(self):

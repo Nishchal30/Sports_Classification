@@ -3,8 +3,8 @@ artifacts_root : D:/Deep_Learning_Projects/Sports_Classification/artifacts
 data_ingestion:
   root_dir : D:/Deep_Learning_Projects/Sports_Classification/artifacts/data_ingestion
   source_path : D:/Deep_Learning_Projects/Sports_Classification/notebooks/data.zip
-  local_data_file : D:/Deep_Learning_Projects/Sports_Classification/artifacts/data_ingestion/data.zip
-  unzip_dir : D:/Deep_Learning_Projects/Sports_Classification/artifacts/data_ingestion
+  local_data_file : D:/Deep_Learning_Projects/Sports_Classification/artifacts/data_ingestion/data/data.zip
+  unzip_dir : D:/Deep_Learning_Projects/Sports_Classification/artifacts/data_ingestion/data/train/
 
 
 base_model:
